@@ -80,6 +80,7 @@
     <div class='button_explain'>
       <button style="color:green" on:click={ e => uranium_fever = true }>Uranium fever</button>
     </div>
+
     {:else}
     <div class='button_explain'>
       <h2 style="color: green;">URANIUM FEVER ACTIVATED</h2>
