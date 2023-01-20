@@ -12,7 +12,23 @@
 
 }
 
+html{
+  overflow-x: hidden;
+}
+
+nav {
+  float: left;
+  position: relative;
+  top:50%;
+}
+
+.button_explain {
+  float: left;
+  padding: 2em;
+}
+
 button {
+  width: 150px;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
