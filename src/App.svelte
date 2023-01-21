@@ -44,14 +44,13 @@
   </h1>
 
   {#if !uranium_fever}
-  <nav>
+  <!-- <nav>
     <div style="position:relative">pmira-pe haciendo ciberseguridad</div>
     <img style="width: 200px;" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
-  </nav>
-  
-  <h3>Resumen del proyecto</h3>
-  
-  <div>
+  </nav> -->
+
+  <div class='text'>
+    <h3>Resumen del proyecto</h3>
     <div class='button_explain'>
       <button>Wordpress</button>
       Aquí para ir al blog hecho con wordpress.
@@ -94,19 +93,3 @@
   </div>
   {/if}
 
-
-<style>
-  
-  .main_title {
-    font-family:Inter;
-    font-size: 4em;
-    COLOR: #ECA72C;
-    text-shadow: 0px 0px 6px #ECA72C;
-  }
-  
-  span {
-    position: absolute;
-    font-size: 5vw;
-    user-select: none;
-  }
-</style>
