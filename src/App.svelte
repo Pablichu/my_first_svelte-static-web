@@ -66,18 +66,18 @@
   {:else if menu == 1}
   <div class='text'>
     <h2>Resumen del proyecto</h2>
-    <h3>Mandatory</h3>
-    Este proyecto se compone de <b>3 servicios</b> básicos que son:
-    <ol>
-      <li>Nginx</li>
-      <li>Wordpress</li>
-      <li>MariaDB</li>
-    </ol>
-    <p>Cada servicio tiene que estar desplegado en un contenedor usando Docker Compose.</p>
-    <p>De forma visual sería algo con este aspecto:</p>
-    <img src="src/assets/mandatory.png" alt="mandatory diagram" width="400" height="400">
+    <div class="columna1">
+      <h3>Mandatory</h3>
+      Este proyecto se compone de <b>3 servicios</b> básicos que son:
+      <ol>
+        <li>Nginx</li>
+        <li>Wordpress</li>
+        <li>MariaDB</li>
+      </ol>
+      <p>Cada servicio tiene que estar desplegado en un contenedor usando Docker Compose.</p>
+      <p>De forma visual sería algo con este aspecto:</p>
+      <img src="src/assets/mandatory.png" alt="mandatory diagram" width="400" height="400">
     
-    <div>
       <div>
         <h3>Nginx</h3>
         Es un servidor web que gestiona las peticiones http. Sirve para hacer tanto proxy inverso como equilibrador de cargas.
@@ -94,7 +94,7 @@
       </div>
     </div>
     
-    <div>
+    <div class="columna2">
       <h3>Bonus</h3>
       En esta parte se añaden 5 contenedores con los siguientes servicios:
       <ol>
