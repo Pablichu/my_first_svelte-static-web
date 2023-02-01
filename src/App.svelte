@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
 
-  let uranium_fever:boolean = false;
+  let menu:number = 0;
   const videoId = "GNkO2hzXluU"
 
 
@@ -44,17 +44,26 @@
   </h1>
   
   <div>
-    <button>Links</button>
-    <button>Resumen</button>
-    <button style="color:green" on:click={ e => uranium_fever = true }>Uranium fever</button>
+    <button on:click={ e => menu = 0 }>Links</button>
+    <button on:click={ e => menu = 1 }>Resumen</button>
+    <button style="color:green" on:click={ e => menu = 2 }>Uranium fever</button>
   </div>
 
-  {#if !uranium_fever}
+  {#if !menu}
   <!-- <nav>
     <div style="position:relative">pmira-pe haciendo ciberseguridad</div>
     <img style="width: 200px;" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
   </nav> -->
+  <div>
+    <h3>Links</h3>
+    <button on:click={ e => alert("Todavia no está hecho jeje")}>Wordpres login</button>
+    <button on:click={ e => alert("Todavia no está hecho jeje")}>Wordpress</button>
+    <button on:click={ e => alert("Todavia no está hecho jeje")}>FTP</button>
+    <button on:click={ e => alert("Todavia no está hecho jeje")}>Portainer</button>
+    <button on:click={ e => alert("Todavia no está hecho jeje")}>Adminer</button>
+  </div>
   
+  {:else if menu == 1}
   <div class='text'>
     <h2>Resumen del proyecto</h2>
     <h3>Mandatory</h3>
@@ -80,61 +89,63 @@
       </div>
       <div>
         <h3>MariaDB</h3>
+        <img src="src/assets/mariadb.png" alt="mariadb logo" width="100">
         Es un sistema de gestion de bases de datos sql. Derivado de MySQL, con algunas diferencias, se usan hasta los mismos comandos.
       </div>
     </div>
     
-    <h3>Bonus</h3>
-    
     <div>
-      <h4>Static web</h4>
-      Esta página es una web estática hecha con Svelte que es un framework de desarrollo front-end
+      <h3>Bonus</h3>
+      En esta parte se añaden 5 contenedores con los siguientes servicios:
+      <ol>
+        <li>Redis cache</li>
+        <li>FTP</li>
+        <li>Static web</li>
+        <li>Adminer</li>
+        <li>Portainer</li>
+      </ol>
+      <img src="src/assets/bonus.png" alt="bonus esquema" width="700">
+      <div>
+        <h4>Static web</h4>
+        Esta página es una web estática hecha con Svelte que es un framework de desarrollo front-end
+      </div>
+  
+      <div>
+        <h4>Redis</h4>
+        <img src="src/assets/redis.png" alt="redis logo" width="50">
+        es un motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes
+        pero que opcionalmente puede ser usada como una base de datos durable o persistente.
+        Wordpress lo usa para almacenar query en cache, de esta forma las query son más rápidas.
+      </div>
+      
+      <div>
+        <h4>FTP</h4>
+        <img src="src/assets/ftp.png" alt="ftp logo" width="50">
+        Sus siglas significan <em>File Transfer Protocol</em>. Es un servicio que permite establecer
+        una conexión dedicada a la transferencia de ficheros.
+      </div>
+      
+      <div>
+        <h4>Adminer</h4>
+        Es una herramienta para administrar contenido en bases de datos.
+      </div>
+  
+      <div>
+        <h4>Portainer</h4>
+        <img src="src/assets/portainer.png" alt="portainer logo" width="100">
+          Este es un servicio para gestionar entornos de contenedores. Es decir, podremos gestionar mediante
+          una interfaz los contenedores desplegados de nuestro docker compose mediante una url.
+      </div>
     </div>
-
-    <div>
-      <h4>Redis</h4>
-      <img src="src/assets/redis.png" alt="redis logo" width="50">
-      es un motor de base de datos en memoria, basado en el almacenamiento en tablas de hashes
-      pero que opcionalmente puede ser usada como una base de datos durable o persistente.
-      Wordpress lo usa para almacenar query en cache, de esta forma las query son más rápidas.
-    </div>
-    
-    <div>
-      <h4>FTP</h4>
-      <img src="src/assets/ftp.png" alt="ftp logo" width="50">
-      Sus siglas significan <em>File Transfer Protocol</em>. Es un servicio que permite establecer
-      una conexión dedicada a la transferencia de ficheros.
-    </div>
-    
-    <div>
-      <h4>Adminer</h4>
-      Es una herramienta para administrar contenido en bases de datos.
-    </div>
-
-    <div>
-      <h4>Portainer</h4>
-      <img src="src/assets/portainer.png" alt="portainer logo" width="100">
-        Este es un servicio para gestionar entornos de contenedores. Es decir, podremos gestionar mediante
-        una interfaz los contenedores desplegados de nuestro docker compose mediante una url.
-    </div>
-
-    
-    <div>
-      <h3>Links</h3>
-      <button>Wordpres login</button>
-      <button>Wordpress</button>
-      <button on:click={ e => alert("Todavia no está hecho jeje")}>FTP</button>
-      <button on:click={ e => alert("Todavia no está hecho jeje")}>Portainer</button>
-    </div>
-    
 
   </div>
+
   {:else}
   <div >
     <h2 style="color: green;">URANIUM FEVER ACTIVATED</h2>
     <img style="width: 50%;" alt="uranium fever" src="src/assets/fever.png"/>
     <audio autoplay><source src="src/assets/uranium.mp3" type="audio/mpeg"></audio>
-    <button on:click={ e => uranium_fever = false }>Disconnect uranium fever</button>
+    <button on:click={ e => menu = 0 }>Disconnect uranium fever</button>
     {#each confetti as c}
      <span style="color:rgb(21, 210, 15); left: {c.x}%; top: {c.y}%; transform: scale({c.r})">{c.character}</span>
     {/each}
