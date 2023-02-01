@@ -19,6 +19,22 @@
   text-shadow: 0px 0px 6px #ECA72C;
 }
 
+.foto {
+  width: 200px;
+  padding-top: 50px;
+  border-radius: 5%;
+}
+.container {
+  position: relative;
+}
+.text-in-photo {
+  position: absolute;
+  width: 10px;
+  left: 44%;
+  top: 80%;
+  transform: translate(-50%,-50%);
+}
+
 .columna1 {
   position:absolute;
   left: 10%;
@@ -68,15 +84,4 @@ h2{
 h3{
   font-size: 30px;
   font-family: Poppins;
-}
-
-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 25%;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
 }

@@ -50,10 +50,6 @@
   </div>
 
   {#if !menu}
-  <!-- <nav>
-    <div style="position:relative">pmira-pe haciendo ciberseguridad</div>
-    <img style="width: 200px;" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
-  </nav> -->
   <div>
     <h3>Links</h3>
     <button on:click={ e => alert("Todavia no está hecho jeje")}>Wordpres login</button>
@@ -61,6 +57,10 @@
     <button on:click={ e => alert("Todavia no está hecho jeje")}>FTP</button>
     <button on:click={ e => alert("Todavia no está hecho jeje")}>Portainer</button>
     <button on:click={ e => alert("Todavia no está hecho jeje")}>Adminer</button>
+  </div>
+  <div class="container">
+    <img class="foto" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
+    <div class="text-in-photo">pmira haciendo ciberseguridad</div>
   </div>
   
   {:else if menu == 1}
@@ -151,7 +151,7 @@
     {/each}
   </div>
   {/if}
-
-<style>
-
-</style>
+  
+  <style>
+    
+  </style>
