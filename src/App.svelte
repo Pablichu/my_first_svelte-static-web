@@ -52,11 +52,11 @@
   {#if !menu}
   <div>
     <h3>Links</h3>
-    <button on:click={ e => alert("Todavia no está hecho jeje")}>Wordpres login</button>
-    <button on:click={ e => alert("Todavia no está hecho jeje")}>Wordpress</button>
-    <button on:click={ e => alert("Todavia no está hecho jeje")}>FTP</button>
-    <button on:click={ e => alert("Todavia no está hecho jeje")}>Portainer</button>
-    <button on:click={ e => alert("Todavia no está hecho jeje")}>Adminer</button>
+    <a href="/wp-login.php"><button>Wordpres login</button></a>
+    <a href="/wordpress"><button>Wordpress</button></a>
+    <button on:click={ e => alert("FTP no tiene una pagina como tal jeje")}>FTP</button>
+    <a href="localhost:9000/"><button>Portainer</button></a>
+    <a href="/adminer"><button>Adminer</button></a>
   </div>
   <div class="container">
     <img class="foto" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
