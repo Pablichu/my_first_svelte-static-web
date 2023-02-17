@@ -53,13 +53,13 @@
   <div>
     <h3>Links</h3>
     <a href="/wp-login.php"><button>Wordpres login</button></a>
-    <a href="/wordpress"><button>Wordpress</button></a>
+    <a href="/wordpress/home"><button>Wordpress</button></a>
     <button on:click={ e => alert("FTP no tiene una pagina como tal jeje")}>FTP</button>
-    <a href="localhost:9000/"><button>Portainer</button></a>
+    <a href="https://localhost:9000/"><button>Portainer</button></a>
     <a href="/adminer"><button>Adminer</button></a>
   </div>
   <div class="container">
-    <img class="foto" alt="cibersecurity" src="/src/assets/ciberseguridad.jpeg"/>
+    <img class="foto" alt="cibersecurity" src="src/assets/ciberseguridad.jpeg"/>
     <div class="text-in-photo">pmira haciendo ciberseguridad</div>
   </div>
   
